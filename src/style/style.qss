@@ -1,0 +1,128 @@
+/*-----QLayout-----*/
+QLayout, QScrollArea {
+    border: none;
+}
+
+/*-----QScrollArea-----*/
+/* allow dark mode to update background color correctly */
+HeaderPage {
+    background-color: red;
+}
+
+/*-----WizardFieldWidget-----*/
+WizardFieldWidget, WizardFileFieldWidgetFile{
+/*    background-color: primaryLight;*/
+    min-height: 80px;
+}
+
+WizardFieldWidget#fileField {
+    background-color: none;
+}
+
+WizardFieldWidget Text {
+/*    color: primaryMain;*/
+}
+
+/*-----NothingToShowWidget-----*/
+Widget#NothingToShowWidget {
+    border: 3px dotted primaryMain;
+}
+
+/*-----Text-----*/
+Text {
+}
+
+Text[variant="h1"] {
+    font: bold 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+Text[variant="h3"] {
+    font: bold 15px;
+}
+
+Text[variant="body"], * {
+    font: bold 13px;
+}
+
+Text[variant="error"] {
+    color: red;
+}
+
+/*-----QGroupBox-----*/
+/* this hides the line at the top of the GroupBox */
+QGroupBox {
+    padding-top: 1em;
+    margin-top: -1em;
+}
+
+/*-----PushButton-----*/
+PushButton {
+    font: bold 13px;
+    border: 3px solid primaryMain;
+    padding:10px;
+}
+
+ButtonGroupButton {
+    padding: 15px;
+    text-align: left;
+}
+
+PushButton[variant="contained"] {
+    background-color: primaryMain;
+    color: primaryContrastText;
+}
+
+PushButton[variant="contained-secondary"] {
+    border: 3px solid primaryLight;
+    background-color: primaryLight;
+    color: primaryMain;
+}
+
+PushButton[variant="outlined"] {
+    background-color: primaryLight;
+    color: primaryMain;
+}
+
+PushButton[variant="disabled"] {
+    background-color: #F7F7F7;
+    border: 3px solid #F7F7F7;
+    color: #000;
+}
+
+PushButton[variant="text"] {
+    background-color: none;
+    border: none;
+}
+
+PushButton:hover {
+    background-color: primaryHover;
+    border: 3px solid primaryHover;
+    color: primaryContrastText;
+}
+
+PushButton[variant="disabled"]:hover {
+    background-color: #EEE;
+    border: 3px solid #EEE;
+    color: #000;
+}
+
+PushButton[variant="text"]:hover {
+    background-color: primaryHover;
+    border: none;
+}
+
+PushButton:pressed {
+    background-color: primaryPress;
+    border: 3px solid primaryPress;
+    color: primaryContrastText;
+}
+
+PushButton[variant="text"] {
+    border-radius: 15px;
+}
+
+ImageButton {
+    text-align: center;
+}
