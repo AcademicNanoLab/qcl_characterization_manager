@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56B07E83-8937-3B77-9059-A3F89239E018}</ProjectGuid>
+    <RootNamespace>qcl_characterization_manager</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22621.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qcl_characterization_manager</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qcl_characterization_manager</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>6.6.3_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets;concurrent;opengl;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>6.6.3_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets;concurrent;opengl;printsupport</QtModules>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qcl_characterization_manager</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qcl_characterization_manager</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;src;debug;/include;C:\Qt\6.6.3\msvc2019_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QCUSTOMPLOT_USE_OPENGL;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;$(QTDIR)\lib\Qt6EntryPoint.lib;shell32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\qcl_characterization_manager.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QCUSTOMPLOT_USE_OPENGL;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>
+      </Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>qmake_qmake_immediate</InitFuncName>
+      <NoZstd>true</NoZstd>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <PostBuildEvent>
+      <Command>rmdir /S /Q "$(OutDir)XMGrace"
+xcopy /E /I /Y "$(ProjectDir)lib\XMGrace" "$(OutDir)XMGrace"
+
+rmdir /S /Q "$(OutDir)Ghostscript"
+xcopy /E /I /Y "$(ProjectDir)lib\Ghostscript" "$(OutDir)Ghostscript"
+
+rmdir /S /Q "$(OutDir)miktex-portable"
+xcopy /E /I /Y "$(ProjectDir)lib\miktex-portable" "$(OutDir)miktex-portable"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;src;debug;/include;C:\Qt\6.6.3\msvc2019_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QCUSTOMPLOT_USE_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;$(QTDIR)\lib\Qt6EntryPoint.lib;shell32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\qcl_characterization_manager.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QCUSTOMPLOT_USE_OPENGL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtRcc>
+      <NoZstd>true</NoZstd>
+      <Compression>default</Compression>
+      <InitFuncName>qmake_qmake_immediate</InitFuncName>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\app\main.cpp" />
+    <ClCompile Include="src\app\mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\core\dataprocessing\IDataProcessor.cpp" />
+    <ClCompile Include="src\core\dataprocessing\IthDataProcessor.cpp" />
+    <ClCompile Include="src\core\dataprocessing\LIVDataProcessor.cpp" />
+    <ClCompile Include="src\core\dataprocessing\SpectraDataProcessor.cpp" />
+    <ClCompile Include="src\core\datasheetgenerator\DataSheetGenerator.cpp" />
+    <ClCompile Include="src\core\fileconversion\FileConverter.cpp" />
+    <ClCompile Include="src\core\graceplots\GracePlot.cpp" />
+    <ClCompile Include="src\core\graceplots\IthGracePlot.cpp" />
+    <ClCompile Include="src\core\graceplots\LIVGracePlot.cpp" />
+    <ClCompile Include="src\core\graceplots\SpectraGracePlot.cpp" />
+    <ClCompile Include="src\core\qtplots\qcustomplot.cpp" />
+    <ClCompile Include="src\core\qtplots\qcustomplotwrapper.cpp" />
+    <ClCompile Include="src\core\qtplots\QtLIVPlot.cpp" />
+    <ClCompile Include="src\core\qtplots\QtSpectraPlot.cpp" />
+    <ClCompile Include="src\ui\components\buttons\ButtonGroup.cpp" />
+    <ClCompile Include="src\ui\components\buttons\ButtonGroupButton.cpp" />
+    <ClCompile Include="src\ui\components\buttons\ImageButton.cpp" />
+    <ClCompile Include="src\ui\components\buttons\PushButton.cpp" />
+    <ClCompile Include="src\ui\components\containers\HeaderPage.cpp" />
+    <ClCompile Include="src\ui\components\containers\Widget.cpp" />
+    <ClCompile Include="src\ui\components\imagecaraousel\imagecarousel.cpp" />
+    <ClCompile Include="src\ui\components\text\Text.cpp" />
+    <ClCompile Include="src\ui\components\wizard\DoubleLineEdit.cpp" />
+    <ClCompile Include="src\ui\components\wizard\Wizard.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardDimensionFieldWidget.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardField.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardFieldWidget.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardFileFieldWidget.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardFileFieldWidgetFile.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardPage.cpp" />
+    <ClCompile Include="src\ui\components\wizard\wizardpages\WizardFilePage.cpp" />
+    <ClCompile Include="src\ui\components\wizard\wizardpages\WizardGracePage.cpp" />
+    <ClCompile Include="src\ui\components\wizard\wizardpages\WizardMeasurementSetupPage.cpp" />
+    <ClCompile Include="src\ui\components\wizard\wizardpages\WizardSetupParamsPage.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardRadioFieldWidget.cpp" />
+    <ClCompile Include="src\ui\components\wizard\WizardTextFieldWidget.cpp" />
+    <ClCompile Include="src\ui\dialogs\DirectorySelector.cpp" />
+    <ClCompile Include="src\ui\dialogs\HelpDialog.cpp" />
+    <ClCompile Include="src\ui\dialogs\MessageBox.cpp" />
+    <ClCompile Include="src\ui\pages\ProcessCustomPage.cpp" />
+    <ClCompile Include="src\ui\pages\WelcomePage.cpp" />
+    <ClCompile Include="src\ui\pages\WizardStack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;$(IntDir)\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;$(IntDir)\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\app\mainwindow.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\app\mainwindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\app\ui_mainwindow.h" />
+    <QtMoc Include="src\core\fileconversion\FileConverter.h" />
+    <QtMoc Include="src\core\datasheetgenerator\DataSheetGenerator.h" />
+    <QtMoc Include="src\core\graceplots\IthGracePlot.h" />
+    <QtMoc Include="src\core\graceplots\LIVGracePlot.h" />
+    <QtMoc Include="src\core\graceplots\SpectraGracePlot.h" />
+    <QtMoc Include="src\core\dataprocessing\IthDataProcessor.h" />
+    <QtMoc Include="src\core\dataprocessing\LIVDataProcessor.h" />
+    <QtMoc Include="src\core\dataprocessing\SpectraDataProcessor.h" />
+    <QtMoc Include="src\core\graceplots\GracePlot.h" />
+    <QtMoc Include="src\core\qtplots\QtSpectraPlot.h" />
+    <QtMoc Include="src\core\qtplots\QtLIVPlot.h" />
+    <QtMoc Include="src\core\qtplots\qcustomplotwrapper.h" />
+    <QtMoc Include="src\core\qtplots\qcustomplot.h" />
+    <QtMoc Include="src\core\dataprocessing\IDataProcessor.h" />
+    <QtMoc Include="src\ui\pages\WizardStack.h" />
+    <QtMoc Include="src\ui\pages\WelcomePage.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardFileFieldWidget.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardTextFieldWidget.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardRadioFieldWidget.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardPage.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardFileFieldWidgetFile.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardFieldWidget.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardField.h" />
+    <QtMoc Include="src\ui\components\wizard\WizardDimensionFieldWidget.h" />
+    <QtMoc Include="src\ui\components\wizard\Wizard.h" />
+    <QtMoc Include="src\ui\components\wizard\DoubleLineEdit.h" />
+    <QtMoc Include="src\ui\components\imagecaraousel\imagecarousel.h" />
+    <QtMoc Include="src\ui\dialogs\MessageBox.h" />
+    <QtMoc Include="src\ui\dialogs\DirectorySelector.h" />
+    <QtMoc Include="src\ui\components\text\Text.h" />
+    <QtMoc Include="src\ui\components\containers\Widget.h" />
+    <QtMoc Include="src\ui\components\containers\HeaderPage.h" />
+    <QtMoc Include="src\ui\components\buttons\PushButton.h" />
+    <QtMoc Include="src\ui\components\buttons\ImageButton.h" />
+    <QtMoc Include="src\ui\components\buttons\ButtonGroupButton.h" />
+    <QtMoc Include="src\ui\components\buttons\ButtonGroup.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\resources\equipment\cryostats.dat" />
+    <None Include="src\resources\equipment\livdetectors.dat" />
+    <None Include="src\resources\equipment\powersupply.dat" />
+    <None Include="src\resources\equipment\spectradetectors.dat" />
+    <None Include="src\resources\equipment\spectrometers.dat" />
+    <None Include="src\resources\images\close-button.svg" />
+    <None Include="src\resources\images\next.svg" />
+    <None Include="src\resources\images\previous.svg" />
+    <None Include="src\resources\style\style.qss" />
+    <None Include="src\resources\style\style.sass" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\resources\images\logo.png" />
+    <Image Include="src\resources\images\qcl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resource.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\ui\components\wizard\wizardpages\WizardFilePage.h" />
+    <QtMoc Include="src\ui\components\wizard\wizardpages\WizardGracePage.h" />
+    <QtMoc Include="src\ui\components\wizard\wizardpages\WizardMeasurementSetupPage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\ui\components\wizard\wizardpages\WizardSetupParamsPage.h" />
+    <QtMoc Include="src\ui\pages\ProcessCustomPage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\ui\dialogs\HelpDialog.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
