@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+﻿<RCC>
+	<qresource prefix="/">
+		<file>src/resources/style/style.qss</file>
+		<file>src/resources/style/style.sass</file>
+		<file>src/resources/images/close-button.svg</file>
+		<file>src/resources/images/logo.png</file>
+		<file>src/resources/images/next.svg</file>
+		<file>src/resources/images/previous.svg</file>
+		<file>src/resources/images/qcl.png</file>
+		<file>src/resources/images/down_arrow.svg</file>
+		<file>src/resources/equipment/cryostats.dat</file>
+		<file>src/resources/equipment/livdetectors.dat</file>
+		<file>src/resources/equipment/powersupply.dat</file>
+		<file>src/resources/equipment/spectradetectors.dat</file>
+		<file>src/resources/equipment/spectrometers.dat</file>
+	</qresource>
+=======
+﻿<RCC>
+	<qresource prefix="/">
+		<file>src/resources/style/style.qss</file>
+		<file>src/resources/style/style.sass</file>
+		<file>src/resources/images/close-button.svg</file>
+		<file>src/resources/images/logo.png</file>
+		<file>src/resources/images/next.svg</file>
+		<file>src/resources/images/previous.svg</file>
+		<file>src/resources/images/qcl.png</file>
+		<file>src/resources/images/down_arrow.svg</file>
+		<file>src/resources/equipment/cryostats.dat</file>
+		<file>src/resources/equipment/livdetectors.dat</file>
+		<file>src/resources/equipment/powersupply.dat</file>
+		<file>src/resources/equipment/spectradetectors.dat</file>
+		<file>src/resources/equipment/spectrometers.dat</file>
+	</qresource>
+>>>>>>> 6d1d5693 (Initial commit of QCL Characterization Manager)
+</RCC>
