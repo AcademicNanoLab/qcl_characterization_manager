@@ -6,10 +6,10 @@ This is a GUI interface based in Qt for making LIV and FDR plots with relation t
 
 To generate graphs from a series of text files, first **Start wizard** to input necessary parameters. Then, you will find the needed graphs in the **Analyze files** page.
 
-| ![start-page](./images/3.png)       |     |
+| ![start-page](./qcl_characterization_manager/images/3.png)       |     |
 | ------------------------------------------------- | ----------------------------------------------------------------- |
 |  ![wizard-setup](./qcl_characterization_manager/images/5.png)         | ![wizard-pulse-liv](./qcl_characterization_manager/images/1.png)   |
-| ![graph-liv](./images/8.png) | ![graph-fdr](./images/9.png) |
+| ![graph-liv](./qcl_characterization_manager/images/8.png) | ![graph-fdr](./qcl_characterization_manager/images/9.png) |
    
 ## Viewing Graphs From Directory
 
