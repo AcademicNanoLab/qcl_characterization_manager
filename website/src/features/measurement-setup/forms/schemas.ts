@@ -1,0 +1,40 @@
+import { z } from "zod";
+
+export const setupSchema = z.object({
+  author: z.string().min(1),
+  date: z.string().min(1),
+  waferNumber: z.string().min(1),
+  deviceName: z.string().min(1),
+  design: z.string().min(1),
+  waveguide: z.enum(["SM", "DM"]),
+  approxEmissionFrequencyThz: z.coerce.number().optional(),
+  width: z.coerce.number().positive(),
+  length: z.coerce.number().positive(),
+  height: z.coerce.number().positive(),
+});
+
+export const measurementSchema = z.object({
+  pulsedCryostat: z.string().optional(),
+  pulsedLivDetector: z.string().optional(),
+  pulsedSpectraDetector: z.string().optional(),
+  pulsedPowerSupply: z.string().optional(),
+  pulsedSpectrometer: z.string().optional(),
+  pulsedPowerScale: z.coerce.number().positive(),
+  pulsedDriveFrequency: z.coerce.number().optional(),
+  pulsedDutyCycle: z.coerce.number().optional(),
+  pulsedGateFrequency: z.coerce.number().optional(),
+  pulsedTMax: z.coerce.number().optional(),
+  pulsedFMin: z.coerce.number().optional(),
+  pulsedFMax: z.coerce.number().optional(),
+  pulsedTFix: z.coerce.number().optional(),
+  cwCryostat: z.string().optional(),
+  cwLivDetector: z.string().optional(),
+  cwSpectraDetector: z.string().optional(),
+  cwPowerSupply: z.string().optional(),
+  cwSpectrometer: z.string().optional(),
+  cwPowerScale: z.coerce.number().positive(),
+  cwTMax: z.coerce.number().optional(),
+  cwFMin: z.coerce.number().optional(),
+  cwFMax: z.coerce.number().optional(),
+  cwTFix: z.coerce.number().optional(),
+});
